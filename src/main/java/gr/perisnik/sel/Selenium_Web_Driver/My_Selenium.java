@@ -27,12 +27,13 @@ public class My_Selenium {
 
         try {
             // Navigate to the website
-            driver.get("https://tutorialsninja.com/demo/index.php?route=common/home");
+        	String url = "https://tutorialsninja.com/demo/index.php?route=common/home";
+            driver.get(url);
 
             // Maximize the browser window
             driver.manage().window().maximize();
             
-            // Counts all tags <a></a> and then printed
+            // Counts all tags <a></a> and then print it
             int countTagsA = driver.findElements(By.tagName("a")).size();
             System.out.println(countTagsA);
 
