@@ -1,0 +1,59 @@
+<project xmlns="http://maven.apache.org/POM/4.0.0" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+  xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/xsd/maven-4.0.0.xsd">
+  
+  <!-- Maven POM file model version -->
+  <modelVersion>4.0.0</modelVersion>
+
+  <!-- Project information -->
+  <groupId>gr.perisnik.sel</groupId> <!-- Group ID: Identifies the project uniquely -->
+  <artifactId>Selenium_Web_Driver</artifactId> <!-- Artifact ID: The name of the project -->
+  <version>0.0.1-SNAPSHOT</version> <!-- Version of the project -->
+  <packaging>jar</packaging> <!-- Packaging type: Defines the output as a JAR file -->
+
+  <name>Selenium_Web_Driver</name> <!-- Name of the project -->
+  <url>http://maven.apache.org</url> <!-- URL for project information (optional) -->
+
+  <!-- Encoding and Java version properties -->
+  <properties>
+    <project.build.sourceEncoding>UTF-8</project.build.sourceEncoding> <!-- Encoding for source files -->
+    <maven.compiler.source>1.8</maven.compiler.source> <!-- Java source compatibility -->
+    <maven.compiler.target>1.8</maven.compiler.target> <!-- Java target compatibility -->
+  </properties>
+
+  <dependencies>
+    <!-- JUnit Jupiter API -->
+    <!-- Provides the API for writing unit tests with JUnit 5 -->
+    <dependency>
+      <groupId>org.junit.jupiter</groupId>
+      <artifactId>junit-jupiter-api</artifactId>
+      <version>5.8.1</version>
+      <scope>test</scope> <!-- Only required during test execution -->
+    </dependency>
+
+    <!-- JUnit Jupiter Engine -->
+    <!-- Provides the engine to execute JUnit 5 tests -->
+    <dependency>
+      <groupId>org.junit.jupiter</groupId>
+      <artifactId>junit-jupiter-engine</artifactId>
+      <version>5.8.1</version>
+      <scope>test</scope> <!-- Only required during test execution -->
+    </dependency>
+
+    <!-- Selenium Java -->
+    <!-- Required for working with Selenium WebDriver -->
+    <dependency>
+        <groupId>org.seleniumhq.selenium</groupId>
+        <artifactId>selenium-java</artifactId>
+        <version>4.26.0</version> <!-- Use the latest version for compatibility -->
+    </dependency>
+
+    <!-- TestNG -->
+    <!-- A testing framework alternative to JUnit -->
+    <dependency>
+        <groupId>org.testng</groupId>
+        <artifactId>testng</artifactId>
+        <version>7.10.2</version>
+        <scope>test</scope> <!-- Only required during test execution -->
+    </dependency>
+  </dependencies>
+</project>
