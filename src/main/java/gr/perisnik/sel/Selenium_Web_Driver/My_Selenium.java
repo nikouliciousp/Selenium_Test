@@ -1,5 +1,6 @@
 package gr.perisnik.sel.Selenium_Web_Driver;
 
+import java.awt.desktop.SystemSleepEvent;
 import java.time.Duration;
 
 import org.openqa.selenium.By;
@@ -21,8 +22,8 @@ public class My_Selenium {
 		System.setProperty("webdriver.firefox.driver", "C:/Users/pirat/Documents/Projects/WebDrivers/geckodriver.exe");
 		WebDriver driver = new FirefoxDriver();
 				
-		// Create WebDriverWait for dynamic waits
-        WebDriverWait wait = new WebDriverWait(driver, Duration.ofSeconds(10));
+		// Create WebDriverWait with a timeout of 15 seconds
+        WebDriverWait wait = new WebDriverWait(driver, Duration.ofSeconds(15));
 
         try {
             // Navigate to the website
@@ -30,6 +31,10 @@ public class My_Selenium {
 
             // Maximize the browser window
             driver.manage().window().maximize();
+            
+            // Counts all tags <a></a> and then printed
+            int countTagsA = driver.findElements(By.tagName("a")).size();
+            System.out.println(countTagsA);
 
             // Wait for the search box to be clickable and click it
             WebElement searchBox = wait.until(ExpectedConditions.elementToBeClickable(By.name("search")));
@@ -69,6 +74,7 @@ public class My_Selenium {
             }
         } catch (Exception e) {
             // Print any errors that occur
+            System.out.println("An error occurred: " + e.getMessage());
             e.printStackTrace();
         } finally {
             // Close the browser
